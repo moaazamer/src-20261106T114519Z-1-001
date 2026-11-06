@@ -1,0 +1,78 @@
+.loading {
+  display: none
+}
+
+#view-toggle button {
+  border-radius: 6px;
+}
+
+#view-toggle button.view-active {
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 12%);
+}
+
+#view-toggle button.view-active i {
+  color: #059669;
+}
+
+#recipes-grid.recipes-list-view {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+#recipes-grid.recipes-list-view .recipe-card {
+  display: flex;
+  align-items: stretch;
+}
+
+#recipes-grid.recipes-list-view .recipe-card> :first-child {
+  width: 220px;
+  height: 180px;
+  flex-shrink: 0;
+}
+
+#recipes-grid.recipes-list-view .recipe-card> :last-child {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (max-width: 640px) {
+  #recipes-grid.recipes-list-view .recipe-card> :first-child {
+    width: 120px;
+    height: 160px;
+  }
+
+  #recipes-grid.recipes-list-view .recipe-card> :first-child>div {
+    display: none;
+  }
+}
+
+.favorite-button {
+  padding: 8px 12px;
+  border: 1px solid #059669;
+  border-radius: 8px;
+  background: white;
+  color: #047857;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.meal-favorite {
+  margin-top: 12px;
+}
+
+.favorite-button[aria-pressed="true"] {
+  background: #ecfdf5;
+}
+
+.favorite-button:focus-visible {
+  outline: 3px solid #059669;
+  outline-offset: 3px;
+}
+
+#all-recipes-section>div>div:first-child {
+  flex-wrap: wrap;
+  gap: 12px;
+}
